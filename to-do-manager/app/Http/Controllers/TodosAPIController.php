@@ -8,7 +8,7 @@ class TodosAPIController extends Controller
 {
     public function index()
     {
-        $toDos = Todo::all();
+        $toDos = Todo::with(['category'])->get();
         return response()->json([
             'message' => 'Todos retrieved successfully',
             'success' => true,
@@ -73,5 +73,38 @@ class TodosAPIController extends Controller
             ]);
         }
     }
+
+    public function completedTasks(Request $request)
+    {
+        if (isset($request->completed)) {
+            $toDos = Todo::where('completed', '=', $request->completed)->get();
+        } else {
+            $toDos = Todo::all();
+        }
+        return response()->json([
+            'message' => 'Todo completed items found successfully.',
+            'success' => true,
+            'data' => $toDos
+        ]);
+    }
 }
+//    public function filterByCategory(Request $request)
+//    {
+//        $toDos = Todo::with(['category'])->get();
+//        if (isset($request->name['category'])) {
+//            $toDos = Todo::where('category', '=', $request->category_id->name)->get();
+//        } else {
+//            $toDos = Todo::all();
+//        }
+//        return response()->json([
+//            'message' => 'Todo completed items found successfully.',
+//            'success' => true,
+//            'data' => $toDos
+//        ]);
+//    }
+//};
+
+
+
+
 

@@ -11,3 +11,5 @@ Route::get('/index', [TodosAPIController::class, 'index']);
 Route::post('/index/',[TodosAPIController::class, 'create']);
 Route::delete('/index/',[TodosAPIController::class, 'delete']);
 Route::put('/index/{id}',[TodosAPIController::class, 'update']);
+Route::get('/completed/',[TodosAPIController::class, 'completedTasks']);
+//Route::get('/category/',[TodosAPIController::class, 'filterByCategory']);

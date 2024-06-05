@@ -18,7 +18,7 @@
 </header>
 
 <section class="container mx-auto md:w-2/3 grid md:grid-cols-1 gap-5 mt-10">
-    @foreach ($toDos as $toDo)
+    @foreach ($category->$toDos as $toDo)
         <div class="flex justify-between items-center bg-slate-100 p-5">
             <h3 class="text-2xl">{{$toDo->name}}</h3>
             @if(($toDo->completed) === true)

@@ -20,18 +20,18 @@ class TodoController extends Controller
             return view('index', ['toDos' => $toDos]);
         }
 
-        public function completedTasks(Request $request)
-        {
-            if (isset($request->completed)) {
-                $completed = $request->completed;
-                $toDos = Todo::where('complete', '=', $completed)->get();
-            } else {
-                $toDos = Todo::all();
-            }
-//            return response('task complete');
-
-            return view('index', ['toDos' => $toDos]);
-
-        }
+//        public function completedTasks(Request $request)
+//        {
+//            if (isset($request->completed)) {
+//                $completed = $request->completed;
+//                $toDos = Todo::where('complete', '=', $completed)->get();
+//            } else {
+//                $toDos = Todo::all();
+//            }
+////            return response('task complete');
+//
+//            return view('index', ['toDos' => $toDos]);
+//
+//        }
 
 }
