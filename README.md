@@ -4,7 +4,7 @@ A To-Do List Manager app, to help organise your tasks.
 
 ## Description
 
-This To-Do Manager app is a Laravel project that fetches and displays information about various personal tasks (each linked to a category type) from a MySQL database. You can view a list of To-Do's which can be filtered by complete or incomplete. Each task can also be viewed indiviudally. 
+This To-Do Manager app is a Laravel project that displays information about various personal tasks (each linked to a category type) from a MySQL database. You can view a list of To-Do's which can be filtered by complete or incomplete. Each task can also be viewed indiviudally. 
 
 ## Getting Started
 
