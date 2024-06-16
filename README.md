@@ -28,18 +28,13 @@ This To-Do Manager app is a Laravel project that fetches and displays informatio
    ```bash
    composer install
    
-4. Generate the application key:
-   ```bash
-   php artisan key:generate
+4. Create a new MySQL database named 'to_dos'. 
    
-5. Create a new MySQL database named laravel_furniture_store and import the provided 
-   SQL file: /
-   
-7. Ensure that details are correct in the .env file, in order to connect the 
+7. Copy the .env.example file and save as .env. Ensure that your details are correct in the .env file, in order to connect the 
    database.
    DB_CONNECTION=mysql, 
-   DB_DATABASE=*******, and 
-   DB_PASSWORD=password
+   DB_DATABASE=to_dos, and 
+   DB_PASSWORD=******
    
 8. **Run the database migrations (if needed):**
 
